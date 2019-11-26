@@ -1,0 +1,11 @@
+  body {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto','Helvetica','Arial',sans-serif;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 100vh;
+  }
+

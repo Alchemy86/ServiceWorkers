@@ -1,0 +1,10 @@
+{
+  "name": "Service Worker",
+  "short_name": "Service Worker",
+  "lang": "en-UK",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#FF9800",
+  "background_color": "#FF9800",
+  "icons": [ ]
+}

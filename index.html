@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta charset="utf-8">
+  <title>Simple Service Worker</title>
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FF9800">
+
+</head>
+
+<body>
+  <header>
+    <h1>Service Worker</h1>
+  </header>
+  <section id="installBanner" class="banner">
+    <button id="installBtn">Install app</button>
+  </section>
+  <main>
+    Im just here for the service worker
+
+  </main>
+  <footer>
+      Im at the bottom
+  </footer>
+  <script>
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => {
+            console.log('Service worker registered! 😎', reg);
+            reg.update();
+            console.log('Service worker updated! 😎', reg);
+          })
+          .catch(err => {
+            console.log('😥 Service worker registration failed: ', err);
+          });
+      });
+    }
+    </script>
+
+
+</body>
+</html>
